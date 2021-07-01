@@ -1,10 +1,10 @@
 import funcionalidades
-import classes
+import menuTurmas
 
 ListaMaterias = []
 ListaProfessores = []
 ListaAlunos = []
-ListaTurmas = []
+
 opcao = 0
 while(opcao != 8):
     
@@ -19,18 +19,21 @@ while(opcao != 8):
     print("Aperte 8 para Sair do programa")
     opcao = int(input())
     if (opcao == 1):
-        nome_Materia = input("Qual o nome da matéria?")
-        funcionalidades.cadastroMateria(ListaMaterias,nome_Materia)
+        nome_Materia = input("Qual o nome da matéria? ")
+        codigo_Materia = input("Qual o código da matéria? ")
+        funcionalidades.cadastroMateria(ListaMaterias, nome_Materia, codigo_Materia)
     
     elif (opcao == 2):
-        nome_Professor = input("Qual o nome do professor?")
-        funcionalidades.cadastroProfessor(ListaProfessores,nome_Professor)
+        nome_Professor = input("Qual o nome do professor? ")
+        departamento_professor = input("Qual seu departamento? ")
+        funcionalidades.cadastroProfessor(ListaProfessores, nome_Professor, departamento_professor)
     
     elif (opcao == 3):
-        nome_Aluno = input("Qual o nome do aluno?")
-        funcionalidades.cadastroAluno(ListaAlunos,nome_Aluno)
+        nome_Aluno = input("Qual o nome do aluno? ")
+        dre_Aluno = input("Qual o DRE do aluno? ")
+        periodo_Aluno = input("Qual o periodo do aluno? ")
+        funcionalidades.cadastroAluno(ListaAlunos, nome_Aluno, dre_Aluno, periodo_Aluno)
         
-    
     elif (opcao == 4):
         funcionalidades.printLista(ListaMaterias)
 
@@ -40,4 +43,5 @@ while(opcao != 8):
     elif (opcao == 6):
         funcionalidades.printLista(ListaAlunos)
 
-    #elif (opcao == 7):
+    elif (opcao == 7):
+        menuTurmas.menu_Turma()
