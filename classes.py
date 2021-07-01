@@ -21,16 +21,29 @@ class Aluno:
         self.periodo = periodo
 
     def __str__(self):
-        return f'Nome: {self.nome}\n DRE: {self.dre}\n Período: {self.periodo}'
+        return f'Nome: {self.nome}\nDRE: {self.dre}\nPeríodo: {self.periodo}'
+
 
 class Turma:
     def __init__(self, nome):
         self.nome = nome
+        self.listaAlunosTurma = []
+    
+    def AddAluno(self, aluno):
+        self.listaAlunosTurma.append(aluno)
+
+    def RemvAluno(self, aluno):
+        self.listaAlunosTurma.remove(aluno)
 
     def DesProfessor(self, professor):
         if(isinstance(professor, str)):
             self.professor = professor        
 
     def __str__(self):
-        return f'Turma: {self.nome}\n Professor: {self.professor}'
+        return f'Turma: {self.nome}\nProfessor: {self.professor}'
+    
+    def MostraAlunos(self):
+        for aluno in self.listaAlunosTurma:
+            print(aluno)
+
 

@@ -1,9 +1,8 @@
 import funcionalidades
 import menuTurmas
+from Listas import *
 
-ListaMaterias = []
-ListaProfessores = []
-ListaAlunos = []
+
 
 opcao = 0
 while(opcao != 8):

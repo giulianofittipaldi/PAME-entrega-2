@@ -13,13 +13,32 @@ def cadastroTurma(lista, nome):
     lista.append(classes.Turma(nome))
 
 def DesignaProfessor(lista, nome_turma, nome_professor):
-    for i in range(len(lista)):
+    for i in range(len(lista)-1):
         if(nome_turma == lista[i].nome):
             lista[i].DesProfessor(nome_professor)
 
+#def AdicionaAluno(lista, listaTodosAlunos, nome_turma, nome):
+   # turma = ProcuraLista(lista, nome_turma)
+    #aluno = ProcuraLista(listaTodosAlunos, nome)
+    #if turma and aluno:
+        #turma.AddAluno(aluno)
+
+#def RemoveAluno(lista, nome_turma, nome_aluno):
+    #turma = ProcuraLista(lista, nome_turma)
+    #if turma:
+       # turma.RemvAluno(nome_aluno)
+
+def ProcuraLista(lista, nome):
+    for elem in lista:
+        if(nome == elem.nome):
+            return elem
+    return None
+
 def printLista(lista):
-    for i in range (len(lista)):
-        print(f'\n{lista[i]}\n')
-
-
     
+    for item in lista:
+        print(f'\n{item}')
+            
+
+
+
