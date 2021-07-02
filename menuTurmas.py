@@ -42,8 +42,13 @@ def menu_Turma():
             turma = funcionalidades.ProcuraLista(ListaTurmas, nome_Turma)
             turma.RemvAluno(aluno)
 
-        #elif (opcao == 5):
-            #funcionalidades.
+        elif (opcaoMenuTurma == 5):
+            nome_Turma = input("Qual o nome da turma? ")
+            nome_Aluno = input("Qual o nome do aluno? ")
+            nota = int(input("Qual a nota do aluno? "))
+            aluno = funcionalidades.ProcuraLista(ListaAlunos, nome_Aluno)
+            turma = funcionalidades.ProcuraLista(ListaTurmas, nome_Turma)
+            aluno.AddNota(nota)
 
         elif (opcaoMenuTurma == 6):
             nome_Turma = input("Qual o nome da turma? ")

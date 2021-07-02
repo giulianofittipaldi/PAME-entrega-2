@@ -10,7 +10,7 @@ while(opcao != 8):
     print("Selecione a opção desejada")
     print("Aperte 1 para cadastrar uma nova materia")
     print("Aperte 2 para cadastrar um novo professor")
-    print("Aperte 3 para cadastrar uma nova aluno")
+    print("Aperte 3 para cadastrar um nova aluno")
     print("Aperte 4 para mostrar todas as materias cadastradas")
     print("Aperte 5 para mostrar todos os professores cadastradas")
     print("Aperte 6 para mostrar todos os alunos cadastrados")
