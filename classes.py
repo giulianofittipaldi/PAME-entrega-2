@@ -19,14 +19,12 @@ class Aluno:
         self.nome = nome
         self.dre = dre
         self.periodo = periodo
-        self.nota = "Não há notas atribuídas"
+        self.nota = 'Não há notas atribuídas'
 
     def __str__(self):
         return f'Nome: {self.nome}\nDRE: {self.dre}\nPeríodo: {self.periodo}\nNota: {self.nota}\n'
     
     def AddNota(self, nota):
-        if nota<0:
-            return 0
         self.nota = nota
 
 class Turma:
@@ -34,9 +32,12 @@ class Turma:
     def __init__(self, nome):
         self.nome = nome
         self.listaAlunosTurma = []
-        self.professor = "Não há professor designado"
-        
+        self.professor = 'Não há professor designado'
+        self.materia = 'Não há matéria atribuída a essa turma'
     
+    def AddMateria(self, materia):
+        self.materia = materia
+
     def AddAluno(self, aluno):
         self.listaAlunosTurma.append(aluno)
 
@@ -48,7 +49,7 @@ class Turma:
             self.professor = professor        
 
     def __str__(self):
-        return f'Turma: {self.nome}\nProfessor: {self.professor}'
+        return f'Turma: {self.nome}\nProfessor: {self.professor}\nMatéria: {self.materia}'
     
     def MostraAlunos(self):
         for aluno in self.listaAlunosTurma:

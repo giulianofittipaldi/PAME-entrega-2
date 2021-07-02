@@ -26,8 +26,20 @@ def ProcuraLista(lista, nome):
 def printLista(lista):
     
     for item in lista:
-        print(f'\n{item}')
+        print(f'\n{item}\n')
             
+def VerificaInteiro(numero):
+        try:
+            float(numero)
+            return True
+        except ValueError:
+            return False
 
+def VerificaVazio(string):
+    if string == '':
+        return True
+        
+    return False
+    
 
 
